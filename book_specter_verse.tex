@@ -24,7 +24,7 @@
     \fancyfoot[C]{\thepage}
     \renewcommand{\headrulewidth}{0pt}
 }
-\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage[protrusion=true]{microtype} % Changed: removed expansion=true
 \usepackage{csquotes}
 \usepackage{hyperref}
 \hypersetup{
@@ -32,10 +32,11 @@
     linkcolor=blue,
     urlcolor=blue
 }
+\AtBeginDocument{\sloppy} % Added: relax line-breaking to reduce overfull hboxes
 
 \begin{document}
 
-% Title Page (unchanged from your original)
+% [Rest of your document, e.g., Chapter 9 content remains unchanged]
 \begin{titlepage}
     \centering
     \vspace*{3cm}
@@ -45,7 +46,6 @@
 \end{titlepage}
 \clearpage
 
-% Content Warning (unchanged from your original)
 \chapter*{Content Warning}
 The story contains potentially triggering or distressing content, including:
 \begin{itemize}
@@ -58,7 +58,6 @@ The story contains potentially triggering or distressing content, including:
 These elements are purely fictional and do not reflect the author’s personal views. Reader discretion is advised.
 \clearpage
 
-% Table of Contents (optional, can be expanded later)
 \tableofcontents
 \clearpage
 
